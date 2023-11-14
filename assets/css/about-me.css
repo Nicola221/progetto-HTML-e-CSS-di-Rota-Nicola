@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(Roboto-Light-webfont.woff) format("woff");
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "roboto";
+    src: url(Roboto-Italic-webfont.woff) format("woff");
+    font-style: italic;
+}
+
+body {
+    font-family: "roboto", sans-serif;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #FFF;
+    background-color: black;
+    flex-wrap: wrap;
+  }
+
+header {
+    text-align: center;
+    z-index: 1;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+  }
+nav {
+    color: #FFF;
+      background-color: burlywood;
+      width: 100%;
+  }
+  
+  nav ul {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+  }
+  
+  nav li {
+      list-style-type: none;
+      width: 100px;
+      padding-top: .5em;
+      padding-bottom: .5em;
+  }
+  
+  nav li.selected {
+      color: black;
+  }
+
+  nav a:link,
+nav a:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:active {
+    color: black;
+}
+
+a:link,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #5D6063;
+}
+
+.intro-me {
+    color: burlywood;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 70px;
+    font-style: italic;
+}
+
+.coding{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 250px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.sx {
+    font-size: 25px;
+    width: 400px;
+    margin-right: 50px;
+    text-align: right;
+    position: relative;
+    top: -50px;
+}
+
+.dx {
+    font-size: 25px;
+    width: 400px;
+    margin-left: 50px;
+    position: relative;
+    top: 150px;
+}
+.scuola-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.scuola {
+    width: 550px;
+    margin-left: 50px;
+}
+
+.scuola h1 {
+    color: burlywood;
+}
+
+.lavoro-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.lavoro {
+    width: 550px;
+    margin-right: 50px;
+    text-align: right;
+}
+
+.lavoro h1{
+    color: burlywood;
+}
+
+.passioni {
+    color: burlywood;
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+    margin-bottom: 100px;
+}
+
+.calcio-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.calcio {
+    width: 550px;
+    margin-left: 50px;
+}
+
+.calcio h1 {
+    color: burlywood;
+}
+
+.gym-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.gym {
+    width: 550px;
+    margin-right: 50px;
+    text-align: right;
+}
+
+.gym h1 {
+    color: burlywood;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+
+.sx,
+.dx {
+    text-align: center;
+}
+
+.sx {
+    margin-left: 50px;
+}
+
+.dx {
+    margin-right: 50px;
+}
+
+.scuola-container {
+    flex-direction: column;
+}
+
+.scuola {
+    width: auto;
+    margin-right: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.lavoro-container {
+    flex-direction: column-reverse;
+}
+
+.lavoro {
+    width: auto;
+    text-align: center;
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+.calcio-container {
+    width: auto;
+}
+
+.calcio {
+    margin-right: 50px;
+    text-align: center;
+    padding-top: 20px;
+}  
+
+.gym-container {
+   width: auto;
+}
+
+.gym {
+    width: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-left: 50px;
+}
+
+header {
+    z-index: 1;
+  }
+  
+  .links {
+    position: absolute;
+    background-color: burlywood;
+    top: 40px;
+    flex-direction: column;
+    width: 100%;
+  
+    clear: both;
+    display: none;
+    transition: max-width .02 ease-out;
+  }
+  
+  .menu-icon {
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .nav-icon {
+    background-color: #5D6063;
+    display: block;
+    width: 18px;
+    height: 2px;
+    position: relative;
+    transition: bacground-color .2s ease-out;
+  }
+  
+  .nav-icon::before {
+    background-color: #5D6063;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-out;
+    position: absolute;
+    top: 5px;
+  }
+  
+  .nav-icon::after {
+    background-color: #5D6063;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-out;
+    position: absolute;
+    top: -5px;
+  }
+  
+  .menu-btn {
+    display: none;
+  }
+  
+  .menu-btn:checked ~ .links {
+     display: block;
+  }
+  
+
+
+}
+
+
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+    .sx{
+        text-align: center;
+        margin-left: 50px;
+    }
+
+    .dx{
+        text-align: center;
+        margin-right: 50px;
+    }
+    .scuola-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .scuola {
+        width: auto;
+        margin-right: 50px;
+     
+    }
+    
+    .gym {
+        margin-left: 50px;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .calcio {
+        margin-left: 50px;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .lavoro {
+        text-align: center;
+        margin-right: 50px;
+        padding-bottom: 40px;
+    }
+
+    .scuola-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .scuola {
+        padding: 70px;
+        text-align: center;
+        margin-left: 50px;
+    }
+
+    .menu-btn {
+        display: none;
+      }
+}
+
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+    .menu-btn {
+      display: none;
+    }
+  }
